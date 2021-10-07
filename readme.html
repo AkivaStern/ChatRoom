@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Readme</title>
+</head>
+<body>
+<!-- Main content -->
+<h1>Internet Course, Semester B - Exercise 4</h1>
+<a href="api/index.html">link to javadoc</a>
+<h2>Author</h2>
+<ul>
+    <li>Akiva Stern</li>
+    <li>ID 320818008</li>
+    <li>akivast@hac.ac.il</li>
+</ul>
+<h2>Execution</h2>
+<p>First make sure the is a SQL table named ex4 running on a separate server.<br>
+    Then run from IntelliJ this 'Ex4Application, and go to localhost:8080
+</p>
+<br>
+<h2>Undefined Characteristics:</h2> <p>
+    The Messages are held in SQL database. Access to them is by using beans (singleton),
+in the appropriate places.<br>
+    <br>
+The list of active users is held in the Application Scope also by using a singleton bean.
+<br>
+Active users are maintained by "timestamping" this data structure everytime a user communicates
+with the server, and every 9 seconds this data structure removes users who didn't communicate with the server
+for over 10 seconds.
+
+</p>
+
+<h2>Bonus</h2>
+<p>A user cannot sign in with a name thats already taken.
+</p>
+
+
+<h2>Asynchronous Behavior</h2>
+<p>Active Users singleton's access methods are synchronized due to concurrent use by potential users.
+</p>
+
+
+<address>Submitted 21 June 2021 </address>
+</body>
+</html>
